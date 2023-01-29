@@ -452,8 +452,8 @@ class TestRunner {
     uint16_t mExpiredCount = 0;
     uint16_t mStatusErrorCount = 0;
     TimeoutType mTimeout = kTimeoutDefault;
-    std::chrono::time_point<std::chrono::system_clock> mStartTime;
-    std::chrono::time_point<std::chrono::system_clock> mEndTime;
+    std::chrono::time_point<std::chrono::high_resolution_clock> mStartTime;
+    std::chrono::time_point<std::chrono::high_resolution_clock> mEndTime;
 };
 
 }
