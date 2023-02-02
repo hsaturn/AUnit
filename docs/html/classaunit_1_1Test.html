@@ -106,6 +106,7 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classaunit_1_1Test.html#af2ad5a29ef88b619265d81ea28a28a94a8f3d10eb21bd36347c258679eba9e92b">Finished</a> = 4
 <br />
  }</td></tr>
+<tr class="memdesc:af2ad5a29ef88b619265d81ea28a28a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LifeCycle states are used by <a class="el" href="classaunit_1_1TestRunner.html" title="The class that runs the various test cases defined by the test() and testing() macros.">TestRunner</a> to determine what a <a class="el" href="classaunit_1_1Test.html" title="Base class of all test cases.">Test</a> should do.  <a href="classaunit_1_1Test.html#af2ad5a29ef88b619265d81ea28a28a94">More...</a><br /></td></tr>
 <tr class="separator:af2ad5a29ef88b619265d81ea28a28a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38883f2194b28f76ccd87dc7236fcb71"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaunit_1_1Test.html#a38883f2194b28f76ccd87dc7236fcb71">Status</a> : uint8_t { <br />
 &#160;&#160;<a class="el" href="classaunit_1_1Test.html#a38883f2194b28f76ccd87dc7236fcb71a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a> = 0
@@ -269,6 +270,9 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The LifeCycle states are used by <a class="el" href="classaunit_1_1TestRunner.html" title="The class that runs the various test cases defined by the test() and testing() macros.">TestRunner</a> to determine what a <a class="el" href="classaunit_1_1Test.html" title="Base class of all test cases.">Test</a> should do. </p>
+<p>Unlike the assertion Status, the LifeCycle is mostly hidden from client code. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af2ad5a29ef88b619265d81ea28a28a94a03c2e7e41ffc181a4e84080b4710e81e"></a>New&#160;</td><td class="fielddoc"><p><a class="el" href="classaunit_1_1Test.html" title="Base class of all test cases.">Test</a> is new, needs to be setup. </p>
 </td></tr>
@@ -286,7 +290,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00057">57</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00059">59</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -322,7 +326,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00099">99</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00101">101</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -376,7 +380,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Mark the test as expired (i.e. </p>
 <p>timed out). Use the <a class="el" href="MetaAssertMacros_8h.html#a0f865d01d2abffc7ba9365ebcdb3eda9" title="Expire the current test, print a status message, and return immediately.">expireTestNow()</a> macro in a unit test to print a diagnostic message and exit immediately. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00242">242</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00244">244</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +410,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Mark the test as failed. </p>
 <p>Use the <a class="el" href="MetaAssertMacros_8h.html#afd0890fab0daa1749abc4dbc8b2905b2" title="Fail the current test, return immediately, and print a status message.">failTestNow()</a> macro in a unit test to print a diagnostic message and exit immediately. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00255">255</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00257">257</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -436,7 +440,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Return the next pointer as a pointer to the pointer, similar to <a class="el" href="classaunit_1_1Test.html#a33f9f14097b77edc19e8298022ecbe60" title="Get the pointer to the root pointer.">getRoot()</a>. </p>
 <p>This makes it much easier to manipulate a singly-linked list. Also makes setNext() method unnecessary. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00195">195</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00197">197</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -496,7 +500,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Return true if test has been asserted. </p>
 <p>Note that this is different than the internal LifeCycleFinished state. The name <a class="el" href="classaunit_1_1Test.html#a07a87e1169ab443429962bc55dde88cc" title="Return true if test has been asserted.">isDone()</a> is a carry-over from ArduinoUnit and might have been named isAsserted() if this library had been built from scratch. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00203">203</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00205">205</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -556,7 +560,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Mark the test as passed. </p>
 <p>Often used to terminate a <a class="el" href="TestMacros_8h.html#a1f7b0603fa6951be1f019586eafc6e6b" title="Macro to define a test that will run repeatly upon each iteration of the global loop() method,...">testing()</a> looping test. The <a class="el" href="MetaAssertMacros_8h.html#ac46547949efbe1a40df64c47949dac0d" title="Pass the current test, print a status message, and return immediately.">passTestNow()</a> macro can be used in a unit test to print a diagnostic message and exit immediately. It is expected that <a class="el" href="classaunit_1_1Test.html#ae71ded07fd6fc69413f64d3d603e4bd6" title="Mark the test as passed.">pass()</a> will be used more often. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00263">263</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00265">265</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -587,7 +591,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Set the status of the test. </p>
 <p>All changes to <a class="el" href="classaunit_1_1Test.html#a1c8bf3e797930683eca78d5c11bde583" title="Get the status of the test.">getStatus()</a> should happen through this method because it also changes the <a class="el" href="classaunit_1_1Test.html#a2c8a3eee4e068578959e0f6302534732" title="Get the life cycle state of the test.">getLifeCycle()</a> of the test. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00180">180</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00182">182</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -617,7 +621,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Optional method that performs any initialization. </p>
 <p>The assertXxx() macros, as well as <a class="el" href="classaunit_1_1Test.html#ae71ded07fd6fc69413f64d3d603e4bd6" title="Mark the test as passed.">pass()</a>, <a class="el" href="classaunit_1_1Test.html#a64023d7738f6ae94dcaeb4fc4c7ec8b3" title="Mark the test as failed.">fail()</a> and <a class="el" href="classaunit_1_1Test.html#a8fcf67b6fdec7a1fa364b1b0b07ff1e5" title="Mark the test as skipped.">skip()</a> functions can be called in here. Subclasses that override this should call the parent's <a class="el" href="classaunit_1_1Test.html#ad32752b60ecc4cab1149d38c2bb2da7c" title="Optional method that performs any initialization.">setup()</a> method in the first line so that the <a class="el" href="classaunit_1_1Test.html#ad32752b60ecc4cab1149d38c2bb2da7c" title="Optional method that performs any initialization.">setup()</a> methods in the inheritance tree are properly chained. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00143">143</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00145">145</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -647,7 +651,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Mark the test as skipped. </p>
 <p>Use the <a class="el" href="MetaAssertMacros_8h.html#a90a70dc25d2628e1e9353736824117b5" title="Skip the current test, print a status message, and return immediately.">skipTestNow()</a> macro in a unit test to print a diagnostic message and exit immediately. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00236">236</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00238">238</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
@@ -677,7 +681,7 @@ Verbosity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Optional method that performs any clean up after the test ends for any reasons, either passing or otherwise. </p>
 <p>Subclasses that override this should call the parent's <a class="el" href="classaunit_1_1Test.html#a698169aed6abd479bd5daec7d1a283c4" title="Optional method that performs any clean up after the test ends for any reasons, either passing or oth...">teardown()</a> method in the last line before returning, so that the <a class="el" href="classaunit_1_1Test.html#a698169aed6abd479bd5daec7d1a283c4" title="Optional method that performs any clean up after the test ends for any reasons, either passing or oth...">teardown()</a> methods in the inheritance tree are properly chained. </p>
 
-<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00152">152</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Test_8h_source.html#l00154">154</a> of file <a class="el" href="Test_8h_source.html">Test.h</a>.</p>
 
 </div>
 </div>
