@@ -249,6 +249,8 @@ class Test {
     /** Disable the given verbosity of the current test. */
     void disableVerbosity(Verbosity verbosity) { mVerbosity &= ~verbosity; }
 
+    static void displayMinPosition(size_t pos) { maxLength = pos; }
+
   protected:
     /**
      * Mark the test as failed. Use the failTestNow() macro in a unit test to

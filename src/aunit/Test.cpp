@@ -98,7 +98,7 @@ void Test::resolve() {
 
   if (result.length())
   {
-    printer->print(F("Test"));
+    // printer->print(F("Test"));
     int spc = maxLength - mName.length() + 1;
 
     while(spc > 0)
