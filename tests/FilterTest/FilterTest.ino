@@ -73,7 +73,7 @@ bool lifeCycleTestsPassed = true;
  * AUnit framework is brought up. So we need to create special assertion macros
  * just for this test.
  */
-void assertionLifeCycle(uint8_t expected, const Test& instance, uint16_t line) {
+void assertionLifeCycle(const Test::LifeCycle expected, const Test& instance, uint16_t line) {
   if (expected != instance.getLifeCycle()) {
     SERIAL_PORT_MONITOR.print(F("FAILED: FilterTest::setup() failed on line "));
     SERIAL_PORT_MONITOR.println(line);
@@ -109,61 +109,61 @@ void setup() {
   // "{testClass}_{name}" (2-argument version of test()).
 
   TestRunner::exclude("*");
-  assertLifeCycle(Test::kLifeCycleExcluded, test_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, test_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomAgain_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomAgain_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, test_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, test_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomAgain_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomAgain_display_instance);
 
   TestRunner::include("configure");
-  assertLifeCycle(Test::kLifeCycleNew, test_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, test_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomAgain_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomAgain_display_instance);
+  assertLifeCycle(Test::LifeCycle::New, test_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, test_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomAgain_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomAgain_display_instance);
 
   TestRunner::include("CustomAgain", "*");
-  assertLifeCycle(Test::kLifeCycleNew, test_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, test_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_display_instance);
-  assertLifeCycle(Test::kLifeCycleNew, CustomAgain_configure_instance);
-  assertLifeCycle(Test::kLifeCycleNew, CustomAgain_display_instance);
+  assertLifeCycle(Test::LifeCycle::New, test_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, test_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_display_instance);
+  assertLifeCycle(Test::LifeCycle::New, CustomAgain_configure_instance);
+  assertLifeCycle(Test::LifeCycle::New, CustomAgain_display_instance);
 
   TestRunner::exclude("CustomAgain", "*");
-  assertLifeCycle(Test::kLifeCycleNew, test_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, test_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomAgain_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomAgain_display_instance);
+  assertLifeCycle(Test::LifeCycle::New, test_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, test_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomAgain_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomAgain_display_instance);
 
   TestRunner::include("CustomAgain", "display");
-  assertLifeCycle(Test::kLifeCycleNew, test_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, test_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomAgain_configure_instance);
-  assertLifeCycle(Test::kLifeCycleNew, CustomAgain_display_instance);
+  assertLifeCycle(Test::LifeCycle::New, test_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, test_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomAgain_configure_instance);
+  assertLifeCycle(Test::LifeCycle::New, CustomAgain_display_instance);
 
   TestRunner::include("CustomOnce", "dis*");
-  assertLifeCycle(Test::kLifeCycleNew, test_configure_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, test_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomOnce_configure_instance);
-  assertLifeCycle(Test::kLifeCycleNew, CustomOnce_display_instance);
-  assertLifeCycle(Test::kLifeCycleExcluded, CustomAgain_configure_instance);
-  assertLifeCycle(Test::kLifeCycleNew, CustomAgain_display_instance);
+  assertLifeCycle(Test::LifeCycle::New, test_configure_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, test_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomOnce_configure_instance);
+  assertLifeCycle(Test::LifeCycle::New, CustomOnce_display_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, CustomAgain_configure_instance);
+  assertLifeCycle(Test::LifeCycle::New, CustomAgain_display_instance);
 
   TestRunner::includesub("ycle");
-  assertLifeCycle(Test::kLifeCycleNew, test_lifeCycle_instance);
+  assertLifeCycle(Test::LifeCycle::New, test_lifeCycle_instance);
 
   TestRunner::excludesub("ife");
-  assertLifeCycle(Test::kLifeCycleExcluded, test_lifeCycle_instance);
+  assertLifeCycle(Test::LifeCycle::Excluded, test_lifeCycle_instance);
 
   TestRunner::include("lifeCycle");
-  assertLifeCycle(Test::kLifeCycleNew, test_lifeCycle_instance);
+  assertLifeCycle(Test::LifeCycle::New, test_lifeCycle_instance);
 }
 
 void loop() {
