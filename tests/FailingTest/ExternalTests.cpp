@@ -1,5 +1,3 @@
-#line 2 "ExternalTests.cpp"
-
 #include "ExternalTests.h"
 
 testing(slow_fail) {

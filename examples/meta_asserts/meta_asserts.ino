@@ -1,5 +1,3 @@
-#line 2 "meta_asserts.ino"
-
 // Adapted from code fragment in the README.md in
 // https://github.com/mmurdoch/arduinounit/
 

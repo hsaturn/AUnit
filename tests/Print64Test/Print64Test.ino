@@ -1,5 +1,3 @@
-#line 2 "Print64Test.ino"
-
 #include <AUnit.h>
 #include <aunit/fake/FakePrint.h>
 

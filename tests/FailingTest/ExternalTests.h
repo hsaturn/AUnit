@@ -1,5 +1,3 @@
-#line 2 "ExternalTests.h"
-
 #ifndef FAILING_TEST_EXTERNAL_TESTS_H
 #define FAILING_TEST_EXTERNAL_TESTS_H
 

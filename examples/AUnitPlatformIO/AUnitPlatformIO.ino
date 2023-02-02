@@ -1,5 +1,3 @@
-#line 2 "AUnitPlatformIO.ino"
-
 #include <AUnit.h>
 
 test(exampleTest) {

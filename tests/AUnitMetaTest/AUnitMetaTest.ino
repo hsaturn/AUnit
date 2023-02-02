@@ -1,5 +1,3 @@
-#line 2 "AUnitMetaTest.ino"
-
 /*
  * These tests examine the various "meta" assertion functions, in other words,
  * statements about the status of other tests. They use the following

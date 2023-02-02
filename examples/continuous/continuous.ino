@@ -1,5 +1,3 @@
-#line 2 "continuous.ino"
-
 // Adapted from:
 // https://github.com/mmurdoch/arduinounit/blob/master/examples/continuous/continuous.ino
 

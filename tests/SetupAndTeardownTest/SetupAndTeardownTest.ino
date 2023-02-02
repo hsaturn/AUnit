@@ -1,5 +1,3 @@
-#line 2 "SetupAndTeardownTest.ino"
-
 /*
 MIT License
 

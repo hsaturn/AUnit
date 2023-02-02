@@ -1,4 +1,3 @@
-#line 2 "CompareTest.ino"
 /*
 MIT License
 

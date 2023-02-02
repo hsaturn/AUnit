@@ -1,5 +1,3 @@
-#line 2 "filter.ino"
-
 // Adapted from:
 // https://github.com/mmurdoch/arduinounit/blob/master/examples/filter/filter.ino
 

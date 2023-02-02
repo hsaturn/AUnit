@@ -1,4 +1,3 @@
-#line 2 "AUnitTestMore.ino"
 /*
 MIT License
 

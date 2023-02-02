@@ -1,5 +1,3 @@
-#line 2 "ExternalTests.cpp"
-
 /*
  * Define a bunch of tests in a file outside of AUnitTest to verify that
  * externTest(), externTesting(), externTestF() and externTestingF() work as

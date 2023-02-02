@@ -1,5 +1,3 @@
-#line 2 "FailingTest.ino"
-
 /*
  * These are tests which (for the most part) are expected to fail because they
  * are testing whether the AUnit framework actually will detect the failure.

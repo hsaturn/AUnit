@@ -1,5 +1,3 @@
-#line 2 "basic_verbose.ino"
-
 // Same as ../basic/basic.ino except this uses <AUnitVerbose.h> instead of
 // <AUnit.h> to get the more verbose assertion messages containing the string
 // fragment of the actual arguments in the assertXxx() macros. The cost is

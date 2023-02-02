@@ -1,5 +1,3 @@
-#line 2 "advanced.ino"
-
 // Adapted from:
 // https://github.com/mmurdoch/arduinounit/blob/master/examples/advanced/advanced.ino
 

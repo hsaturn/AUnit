@@ -1,5 +1,3 @@
-#line 2 "AUnitMetaTest.h"
-
 #ifndef AUNIT_AUNIT_META_TEST_H
 #define AUNIT_AUNIT_META_TEST_H
 

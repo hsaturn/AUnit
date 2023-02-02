@@ -1,5 +1,3 @@
-#line 2 "AUnitPlatformIO.ino"
-
 /*
  * Duplicated from ../AUnitPlatformIO.ino because the Arduino Library Manager
  * does not allow symlinks (see

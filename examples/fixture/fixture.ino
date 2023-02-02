@@ -1,5 +1,3 @@
-#line 2 "fixture.ino"
-
 /*
  * Unit test that shows how to use test fixtures using the testF() macro.
  */

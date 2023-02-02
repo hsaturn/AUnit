@@ -1,5 +1,3 @@
-#line 2 "basic.ino"
-
 // Adapted from:
 // https://github.com/mmurdoch/arduinounit/blob/master/examples/basic/basic.ino
 
