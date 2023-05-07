@@ -29,6 +29,8 @@ SOFTWARE.
 #include "Compare.h"
 #include "Test.h"
 
+#include <string>
+
 namespace aunit {
 
 size_t Test::maxLength = 0;
